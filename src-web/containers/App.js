@@ -14,7 +14,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { AcmHeader, AcmPage, AcmRoute } from '@stolostron/ui-components'
+import { AcmPage } from '@stolostron/ui-components'
+import { HubOfHubsHeader, HubOfHubsRoute } from 'hub-of-hubs-ui-components'
 import queryString from 'query-string'
 import SecondaryHeader from '../components/SecondaryHeader'
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
@@ -254,7 +255,7 @@ const mapStateToProps = state => {
   }
 }
 
-const getAcmRoute = props => {
+const getHubOfHubsRoute = props => {
   let path = ''
   if (client) {
     path = window.location.pathname
@@ -262,9 +263,9 @@ const getAcmRoute = props => {
     path = props.url
   }
   if (path.includes(config.contextPath)) {
-    return AcmRoute.Applications
+    return HubOfHubsRoute.Applications
   }
-  return AcmRoute.Welcome
+  return HubOfHubsRoute.Welcome
 }
 
 const Container = Component =>
@@ -272,13 +273,14 @@ const Container = Component =>
 const AppContainer = Container(App)
 
 const AppComponent = props => (
-  <AcmHeader route={getAcmRoute(props)}>
+  <HubOfHubsHeader route={getHubOfHubsRoute(props)}>
     <Route
       path={config.contextPath}
       serverProps={props}
       component={AppContainer}
     />
-  </AcmHeader>
+  </HubOfHubsHeader>
 )
 AppComponent.displayName = 'AppComponent'
 export default AppComponent
+

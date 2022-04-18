@@ -114,7 +114,10 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        include: path.resolve(__dirname, "./node_modules/@patternfly"),
+        include: [
+          path.resolve(__dirname, "./node_modules/@patternfly"),
+          path.resolve(__dirname, "./node_modules/hub-of-hubs-ui-components/node_modules/@patternfly")
+        ],
         loader: "null-loader"
       },
       {
