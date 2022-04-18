@@ -95,6 +95,7 @@
     "handlebars-loader": "^1.6.0",
     "helmet": "^3.23.3",
     "http-proxy-middleware": "^2.0.0",
+    "hub-of-hubs-ui-components": "github:stolostron/hub-of-hubs-ui-components#v0.3.1",
     "ignore-styles": "^5.0.1",
     "image2svg-loader": "^0.10.0",
     "ip-address": "^6.4.0",

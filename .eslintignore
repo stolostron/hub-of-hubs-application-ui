@@ -1,0 +1,10 @@
+node_modules
+public/*
+coverage/*
+storybook-static
+test-output/*
+webpack.config.js
+travis-scripts
+build-harness/*
+tests/*
+stories/*
