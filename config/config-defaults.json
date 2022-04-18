@@ -1,0 +1,21 @@
+{
+    "API_SERVER_URL": "https://kubernetes.default.svc",
+    "contextPath": "/multicloud/applications",
+    "httpsPort": 3001,
+    "hcmUiApiUrl": "",
+    "searchApiUrl": "",
+    "headerUrl": "https://management-ingress",
+    "feature_searchRelated": false,
+    "featureFlags": {
+        "dashboardLiveUpdates": true,
+        "dashboardRefreshInterval": 20000,
+        "filters": false,
+        "fullDashboard": false,
+        "liveUpdates": 2,
+        "liveUpdatesPollInterval": 15000,
+        "search": true
+    },
+    "OAUTH2_CLIENT_ID": "",
+    "OAUTH2_CLIENT_SECRET": "",
+    "OAUTH2_REDIRECT_URL": ""
+}

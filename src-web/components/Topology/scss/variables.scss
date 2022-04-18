@@ -1,0 +1,61 @@
+/** *****************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2019. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ ****************************************************************************** */
+// Copyright Contributors to the Open Cluster Management project 
+// animation
+$animation__ease-in: cubic-bezier(0.25, 0, 1, 1) !default;
+$animation__ease-out: cubic-bezier(0, 0, 0.25, 1) !default;
+$animation__standard: cubic-bezier(0.5, 0, 0.1, 1) !default;
+
+// secondary header
+$secondary-header-top: 3.082rem !default;
+$secondary-header-min-height: 4.125rem !default;
+$secondary-header-max-height: 7.75rem !default;
+
+// mcm overview cards
+$overview-column-width: 10px !default; /* card width must be multiple of this */
+// also change CARD_SPACING in constants.js
+$overview-card-margin-right: 20px !default; /* margin around cards */
+$overview-card-margin-bottom: 25px !default; /* margin around cards */
+
+
+$ibm-colors__gray--40: #a4a4a4 !default;
+$mcm_color_blue: #3F71EC !default;
+
+//These are carbon colors in previous version but will not in latest carbon 10
+$ibm-colors__gray--40: #a4a4a4 !default;
+
+
+
+
+
+$color__blue-30: #5aaafa !default;
+$color__blue-40: #5596e6 !default;
+$color__blue-50: #4178be !default;
+$color__blue-51: #0066CC !default;
+$color__blue-60: #325c80 !default;
+$color__blue-90: #152935 !default;
+$color__gray-1: #DFE3E6 !default;
+$color__gray-3: #f5f7fa !default;
+$color__green-40: #5aa700 !default;
+$color__navy-gray-4: #394b54 !default;
+$color__navy-gray-5: #42535c !default;
+$color__navy-gray-6: #5A6872 !default;
+$color__navy-gray-7: #8c9ba5 !default;
+$color__navy-gray-8: #dfe6eb !default; 
+$color__purple-30: #ba8ff7 !default;
+$color__purple-60: #734098 !default;
+$color__red-50: #e71d32 !default;
+$color__teal-20: #6eedd8 !default;
+$color__teal-40: #00b4a0 !default;
+$color__teal-60: #006d5d !default;
+$color__white: #ffffff !default;
+$color__yellow-30: #efc100 !default;
+
+// acm background
+$acm_background_color: #F0F0F0 !default;

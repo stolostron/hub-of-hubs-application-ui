@@ -1,0 +1,6 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: ansibleoperator-ssmqp
+  namespace: app-ui-ansibleoperator
+spec: {}

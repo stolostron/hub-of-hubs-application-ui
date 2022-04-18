@@ -1,0 +1,16 @@
+// Copyright (c) 2020 Red Hat, Inc.
+// Copyright Contributors to the Open Cluster Management project
+.emptyStateButtonReference {
+  font-weight: 600;
+}
+
+.pf-c-dropdown {
+  .pf-c-dropdown__toggle {
+    .pf-c-dropdown__toggle-text {
+      padding: 0px
+    }
+    .pf-c-dropdown__toggle-icon {
+      margin: 0px
+    }
+  }
+}

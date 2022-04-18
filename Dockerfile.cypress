@@ -1,0 +1,19 @@
+FROM registry.ci.openshift.org/stolostron/builder:go1.16-linux AS builder
+
+# FROM cypress/included:8.4.1 as production
+FROM quay.io/kcormier/cypress-included:latest as production
+
+USER root
+
+RUN mkdir -p /application-ui-tests/cypress_cache
+ENV CYPRESS_CACHE_FOLDER=/application-ui-tests/cypress_cache
+WORKDIR /application-ui-tests
+COPY tests ./tests
+WORKDIR /application-ui-tests/tests
+
+RUN npm ci
+RUN ./download-clis.sh
+# Make the directory writable by non-root users
+RUN chmod -R go+w /application-ui-tests
+
+ENTRYPOINT ["./start-cypress-tests.sh"]

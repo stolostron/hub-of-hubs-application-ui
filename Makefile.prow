@@ -1,0 +1,18 @@
+# Copyright Contributors to the Open Cluster Management project
+
+-include /opt/build-harness/Makefile.prow
+
+.PHONY: build
+build:
+	npm run build:production
+
+.PHONY: install
+install:
+	npm ci
+
+.PHONY: unit-tests
+unit-tests:
+	if [ ! -d "test-output" ]; then \
+		mkdir test-output; \
+	fi
+	npm run test

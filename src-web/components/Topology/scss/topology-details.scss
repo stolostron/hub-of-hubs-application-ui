@@ -1,0 +1,456 @@
+/** *****************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2018, 2019. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ ****************************************************************************** */
+// Copyright (c) 2020 Red Hat, Inc.
+// Copyright Contributors to the Open Cluster Management project
+@import 'variables';
+
+.topologyDetails {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $color__white;
+  box-shadow: -1px 0 7px 0 rgba(0, 0, 0, 0.10);
+  width: 463px;
+  max-height: 100%;
+  height: 100%;
+
+  .detailsHeader {
+    margin: .5rem 0 0 .5rem;
+    display: flex;
+    align-items: center;
+
+    .detailsIconContainer {
+      margin: 20px 16px 20px 20px;
+    }
+
+    .detailsIcon {
+      border-top: 0;
+      stroke-width: 3px;
+      fill: $color__white;
+    }
+
+    .closeIcon {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      fill: $color__navy-gray-6;
+      stroke: $color__navy-gray-6;
+      cursor: pointer;
+    }
+
+    .titleText {
+      margin-left: .5rem;
+      font-size: .875rem;
+      color: $color__blue-90;
+      font-weight: bold;
+    }
+
+    .titleNameText {
+      font-size: 18px;
+      color: #5a6872;
+    }
+  }
+
+  .legendHeader {
+    margin: 4px 42px 0 24px;
+    display: flex;
+    align-items: center;
+
+    .headerIcon {
+      border-top: 0;
+      stroke-width: 3px;
+      fill: $color__white;
+    }
+
+    .titleText {
+      margin-top: 8px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .bodyText {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .legendBody {
+    margin: 12px 42px 24px 24px;
+    align-items: center;
+
+    .bodyIcon {
+      border-top: 0;
+      stroke-width: 3px;
+      fill: $color__white;
+    }
+
+    .statusSvg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      vertical-align: text-bottom;
+    }
+
+    .iconSvg {
+      width: 40px;
+      height: 40px;
+      margin-top: 6px;
+    }
+
+    .titleText {
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+
+    .titleNoteText {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .bodyText {
+      margin-top: 21px;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+    }
+
+    .bodyResourcesDiv {
+      margin-top: 50px;
+    }
+
+    .titleResourcesText {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+
+    .bodyIconsDiv {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .bodyIconsTextDiv {
+      width: 120px;
+      height: 100px;
+      text-align: center;
+      color: #0066CC;
+      font-size: 12px;
+      line-height: 16px;
+      align-content: flex-end;
+      display: grid;
+    }
+  }
+
+  .closeIcon {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    fill: $color__navy-gray-6;
+    stroke: $color__navy-gray-6;
+    cursor: pointer;
+  }
+
+  hr {
+    border: 1px solid $color__navy-gray-8;
+    margin-bottom: 0.5rem;
+  }
+
+  .sectionContent {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: 20px;
+
+    &.snippet {
+      font-family: monospace;
+      color: $color__navy-gray-6;
+
+      code {
+        white-space: pre-wrap;
+        display: block;
+        font-size: 12px;
+      }
+    }
+
+    &.form {
+      height: 4rem;
+      margin-top: 10px;
+    }
+
+    &.submit {
+      height: 6rem;
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .clusterDetails {
+      .pf-c-pagination {
+        .pf-c-pagination__total-items {
+          display: none;
+        }
+
+        .pf-c-pagination__nav {
+          .pf-c-pagination__nav-control {
+            .pf-c-button {
+              outline-width: 0px;
+            }
+          }
+        }
+
+        .pf-c-options-menu {
+          display: none;
+        }
+      }
+
+      .pf-c-select {
+        .pf-c-select__toggle {
+          .pf-c-select__toggle-wrapper {
+            .pf-c-form-control:focus {
+              outline-width: 0px;
+            }
+          }
+
+          .pf-c-button:focus {
+            outline-width: 0px;
+          }
+        }
+      }
+
+      .pf-c-accordion {
+        --pf-c-accordion__toggle--m-expanded--before--BackgroundColor: #FFFFFF;
+        --pf-c-accordion__toggle--hover__toggle-text--Color: #000000;
+        --pf-c-accordion__toggle--active__toggle-text--Color: #000000;
+        --pf-c-accordion__toggle--focus__toggle-text--Color: #000000;
+        --pf-c-accordion__toggle--active__toggle-text--FontWeight: normal;
+        --pf-c-accordion__toggle--focus__toggle-text--FontWeight: normal;
+        
+        .clusterDetailItem {
+          .pf-c-accordion__toggle {
+            padding-left: 0px;
+          }
+
+          .pf-c-accordion__toggle.pf-m-expanded {
+            .pf-c-accordion__toggle-text {
+              color: #000000;
+              font-weight: normal;
+            }
+          }
+          .pf-c-accordion__toggle:hover {
+            background-color: #FFFFFF;
+          }
+
+          .pf-c-accordion__toggle:active {
+            background-color: #FFFFFF;
+          }
+
+          .pf-c-accordion__toggle:focus {
+            background-color: #FFFFFF;
+            outline-width: 0px;
+          }
+
+          .pf-c-accordion__toggle::after {
+            width: 0px;
+          }
+          
+          .pf-c-accordion__expanded-content.pf-m-expanded {
+            --pf-c-accordion__expanded-content-body--before--BackgroundColor: #FFFFFF;
+            .pf-c-accordion__expanded-content-body {
+              padding-left: 0px;
+              padding-top: 0px;
+            }
+            .pf-c-accordion__expanded-content-body::after {
+              width: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    .appDetails {
+      .pf-c-pagination {
+        .pf-c-pagination__total-items {
+          display: none;
+        }
+
+        .pf-c-pagination__nav {
+          .pf-c-pagination__nav-control {
+            .pf-c-button {
+              outline-width: 0px;
+            }
+          }
+        }
+
+        .pf-c-options-menu {
+          display: none;
+        }
+      }
+
+      .pf-c-select {
+        .pf-c-select__toggle {
+          .pf-c-select__toggle-wrapper {
+            .pf-c-form-control:focus {
+              outline-width: 0px;
+            }
+          }
+
+          .pf-c-button:focus {
+            outline-width: 0px;
+          }
+        }
+      }
+
+      .pf-c-accordion {
+        --pf-c-accordion__toggle--m-expanded--before--BackgroundColor: #FFFFFF;
+        --pf-c-accordion__toggle--hover__toggle-text--Color: #000000;
+        --pf-c-accordion__toggle--active__toggle-text--Color: #000000;
+        --pf-c-accordion__toggle--focus__toggle-text--Color: #000000;
+        --pf-c-accordion__toggle--active__toggle-text--FontWeight: normal;
+        --pf-c-accordion__toggle--focus__toggle-text--FontWeight: normal;
+
+        .appDetailItem {
+          .pf-c-accordion__toggle {
+            padding-left: 0px;
+          }
+
+          .pf-c-accordion__toggle.pf-m-expanded {
+            .pf-c-accordion__toggle-text {
+              color: #000000;
+              font-weight: normal;
+            }
+          }
+          .pf-c-accordion__toggle:hover {
+            background-color: #FFFFFF;
+          }
+
+          .pf-c-accordion__toggle:active {
+            background-color: #FFFFFF;
+          }
+
+          .pf-c-accordion__toggle:focus {
+            background-color: #FFFFFF;
+            outline-width: 0px;
+          }
+
+          .pf-c-accordion__toggle::after {
+            width: 0px;
+          }
+          
+          .pf-c-accordion__expanded-content.pf-m-expanded {
+            --pf-c-accordion__expanded-content-body--before--BackgroundColor: #FFFFFF;
+            .pf-c-accordion__expanded-content-body {
+              padding-left: 0px;
+              padding-top: 0px;
+            }
+            .pf-c-accordion__expanded-content-body::after {
+              width: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .label {
+    font-size: .75rem;
+    font-weight: bold;
+    color: $color__blue-90;
+    line-height: 1.3rem;
+  }
+
+  .borderLeft {
+    border-left: 5px solid #dfe6eb;
+    padding-left: 1rem;
+  }
+
+  .indent {
+    display: inline-block;
+    width: 10px;
+  }
+
+  .value {
+    font-size: .75rem;
+    color: $color__navy-gray-6;
+    word-break: normal;
+  }
+
+  .ksLabelBackground {
+    background-color: #dfe3e6;
+    border-radius: 35px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1rem;
+  }
+
+  .openSearchLink {
+    padding-top: 0.5rem;
+  }
+
+  .link {
+    font-family: 'RedHatText';
+    font-weight: 600;
+    font-size: .75rem;
+    color: $color__blue-51;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.loadingLink {
+      pointer-events: none;
+      color: $color__navy-gray-6;
+    }
+  }
+
+  .open-out-icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .label-icon {
+    width: 10px;
+    height: 10px;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+  }
+
+  .spacer {
+    height: 1rem;
+  }
+
+  .details-view-container {
+    height: calc(100vh - 370px) !important;
+
+    .details-view-scrollbar {
+      width: 100%;
+      visibility: hidden;
+    }
+  }
+
+  .legend-view-container {
+    height: calc(100vh - 300px) !important;
+
+    .details-view-scrollbar {
+      width: 100%;
+      visibility: hidden;
+    }
+  }
+
+  &:hover {
+    .details-view-scrollbar {
+      visibility: visible;
+    }
+  }
+}

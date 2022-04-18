@@ -1,0 +1,156 @@
+/** *****************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2018, 2019. All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or disclosure 
+ * restricted by GSA ADP Schedule Contract with IBM Corp.
+ *******************************************************************************/
+// Copyright (c) 2020 Red Hat, Inc.
+// Copyright Contributors to the Open Cluster Management project
+
+@import 'variables';
+
+.modal-with-editor {
+  .yamlSampleTabsContainer {
+    border-top: 1px solid $color__gray-1;
+  }
+
+  .yamlSampleTabs {
+    padding-left: 25px;
+  }
+}
+
+.remove-app-modal {
+  &-content {
+    height: auto;
+    max-height: 25rem;
+    overflow-y: auto;
+
+    &-text {
+      margin-bottom: 1rem;
+    }
+
+    &-data {
+      width: 100%;
+      border-bottom: 1px solid #dfe3e6;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+
+.yaml-instructions {
+  font-size: 12px;
+  width: 750px;
+}
+
+.yaml-instructions-edit {
+  font-size: 14px;
+  font-weight: 600;
+  height: 36px;
+  width: 80%;
+  // padding-left: 2%;
+  // padding-top: 2%;
+  margin: 1.25rem 3rem 1.25rem 3rem; //remove when docs are ready
+}
+
+.help-link {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  font-size: 12px;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.helpLinkIcon {
+  margin-left: 10px;
+}
+
+.help-link-edit {
+  text-align: right;
+  vertical-align: top;
+  font-size: 12px;
+  position: relative;
+  top: -1rem;
+  right: 3rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.remove-app-modal-content-text {
+  line-height: 21px;
+}
+
+.remove-app-modal-content-data {
+  line-height: 21px;
+  padding-top: 5px;
+}
+
+.remove-app-modal-alert {
+  padding-bottom: 10px;
+}
+
+.shared-resource-content {
+  display: inline-flex;
+  color: $color__blue-90;
+  line-height: 21px;
+  margin-top: 1.5rem;
+
+  svg {
+    fill: #e6ae3c;
+    width: 18px;
+    height: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  p:first-of-type {
+    margin-bottom: 0.5rem;
+  }
+
+  div:first-of-type {
+    margin-right: 5px;
+  }
+}
+
+.sub-child-resource-content {
+  display: inline-flex;
+  color: $color__blue-90;
+  line-height: 21px;
+
+  svg {
+    fill: #e6ae3c;
+    width: 18px;
+    height: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  div:first-of-type {
+    margin-right: 5px;
+  }
+}
+
+.sibling-resource-content {
+  line-height: 21px;
+  font-size: 14px;
+  border-bottom: 1px solid #dfe3e6;
+}
+
+.italic-font {
+  font-style: italic;
+}

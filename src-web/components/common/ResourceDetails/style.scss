@@ -1,0 +1,56 @@
+/** *****************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2019. All Rights Reserved.
+ * US Government Users Restricted Rights - Use, duplication or disclosure
+ * restricted by GSA ADP Schedule Contract with IBM Corp.
+ *******************************************************************************/
+// Copyright (c) 2020 Red Hat, Inc.
+// Copyright Contributors to the Open Cluster Management project
+
+@import '../../../../scss/variables';
+
+#ResourceDetails {
+  .app-info-and-dashboard-links {
+    position: fixed;
+    top: calc(5.1rem + var(--pf-c-page__main-section--PaddingTop));
+    right: 12.75rem;
+    z-index: 1001;
+    background-color: $color__white;
+    display: inline-block;
+  }
+
+  .app-info-and-dashboard-links-separator {
+    border-left: 2px solid $color__gray-1;
+    margin: 0 6.5rem 0 2rem;
+  }
+
+  .app-info-and-dashboard-links-separator-f {
+    border-left: 2px solid $color__gray-1;
+    margin: 0 0 0 0;
+  }
+
+  .app-info-icon {
+    margin: 0 10px 0 0;
+    vertical-align: sub;
+  }
+
+  .app-dashboard-icon {
+    margin: 0 10px 0 0;
+    vertical-align: sub;
+  }
+
+  .resource-diagram-title {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    font-weight: 300;
+    padding: 20px 0 20px 0;
+  }
+}
+
+.toastErrorMsg {
+  margin-top: 2rem;
+}
+
+.toastSuccessMsg {
+  margin-top: 2rem;
+}

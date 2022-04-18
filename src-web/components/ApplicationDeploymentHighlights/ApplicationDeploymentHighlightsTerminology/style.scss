@@ -1,0 +1,79 @@
+/** *****************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2019. All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or disclosure 
+ * restricted by GSA ADP Schedule Contract with IBM Corp.
+ *******************************************************************************/
+// Copyright (c) 2020 Red Hat, Inc.
+// Copyright Contributors to the Open Cluster Management project
+#ApplicationDeploymentHighlightsTerminology {
+  // Remove default blues and greys
+  .pf-c-accordion {
+    --pf-c-accordion__toggle--m-expanded--before--BackgroundColor: none;
+    --pf-c-accordion__toggle--hover__toggle-text--Color: none;
+    --pf-c-accordion__toggle--active__toggle-text--Color: none;
+    --pf-c-accordion__toggle--focus__toggle-text--Color: none;
+    --pf-c-accordion__toggle--m-expanded__toggle-text--Color: none;
+    --pf-c-accordion__expanded-content--m-expanded__expanded-content-body--before--BackgroundColor: none;
+    --pf-c-accordion__toggle--hover--BackgroundColor: white;
+    --pf-c-accordion__toggle--focus--BackgroundColor: white;
+    --pf-c-accordion__toggle--active--BackgroundColor: white;
+  }
+
+  // Bold Terminology header
+  .pf-c-accordion__toggle-text {
+    font-weight: 600;
+  }
+
+  .pf-c-accordion__expanded-content-body {
+    height: 100%;
+    padding: 1.5rem 0.5rem 0.5rem;
+  }
+
+  #terminology-header {
+    height: 57px;
+    padding: 10px calc(10px + 1rem);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .terminology-item {
+    width: 33%;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    float: left;
+  }
+
+  .deployment-highlights-terminology-title {
+    color: #5a6872;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  .deployment-highlights-terminology-content {
+    color: #5a6872;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .deployment-highlights-terminology-docs {
+    text-align: right;
+    display: inline-block;
+    padding: 1.5rem 1rem 0;
+    width: 100%;
+  }
+
+  .deployment-highlights-terminology-docs-text {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #0066cc;
+  }
+
+  .deployment-highlights-terminology-docs-icon {
+    cursor: pointer;
+  }
+}
