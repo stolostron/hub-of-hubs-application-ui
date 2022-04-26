@@ -186,12 +186,6 @@ export default {
       {
         msgKey: 'application.type.acm',
         path: `${config.contextPath}/create`
-      },
-      {
-        msgKey: 'application.type.argo',
-        path: `${config.contextPath}/argoappset`,
-        label: 'creation.app.section.techPreview',
-        labelColor: 'creation.app.section.techPreview.color'
       }
     ]
   },
